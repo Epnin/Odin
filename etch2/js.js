@@ -1,51 +1,50 @@
-$(document).ready(function(){
-    for ( var i = 0; i < 16; i++) {
-      for (var x = 0; x < 16; x++) {
-          $("<div>").addClass("square").appendTo("#container");
-      }
+var squareAmount = 32;
 
-    }
-    $(".square").hover(function(){
-    $(this).css("background-color", function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-              color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-);
+$(document).ready(function() {
 
-  });
-  });
-  function reset(){
-
-      $(".square").remove();
-      var size = prompt("How many boxes do you want this time?");
-      console.log(size);
-      $("#container").css("height", size*12);
-      $("#container").css("width", size*12);
-      for ( var i = 0; i < size; i++) {
-        for (var x = 0; x < size; x++) {
+  function makeGrid() {
+      for (i = 0; i < squareAmount; i++) {
+        for (x = 0; x < squareAmount; x++) {
             $("<div>").addClass("square").appendTo("#container");
-        }
+}
+}
+$(".square").hover(function() {
+  $(this).css("background-color", function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+};
+      return color;
+});
+});
+};
 
-      }
-      $(".square").hover(function(){
-      $(this).css("background-color", function getRandomColor() {
-          var letters = "0123456789ABCDEF";
-          var color = "#"
-          for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-
-      });
-
-    });
-  };
-
-  function randomColor(){
+makeGrid();
+});
+function makeReset() {
+  $(".square").remove();
+  var size = prompt("How many boxes do you want to use?");
+  var squareSize = 320/size;
+  console.log(squareSize);
+  for (i = 0; i < size; i++) {
+    for (x = 0; x < size; x++) {
+      $("<div>").addClass("square").appendTo("#container");
+}
+}
+$('.square').css({'width': squareSize, 'height': squareSize});
+$(".square").hover(function() {
+  $(this).css("background-color", function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+};
+      return color;
+});
+});
+};
+function randomColor(){
   var r = Math.floor(Math.random() * 255);
   var g = Math.floor(Math.random() * 255);
   var b = Math.floor(Math.random() * 255);
@@ -56,5 +55,5 @@ $(document).ready(function(){
   console.log(b);
   console.log(colorR);
   */
-  $("#color").css("background-color", colorR);
+  $(".box").css("background-color", colorR);
 };
