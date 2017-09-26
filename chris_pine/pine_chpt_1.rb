@@ -1,0 +1,5 @@
+puts "There are 365 days in a year"
+puts "So there are #{365.0 * 24.0} hours in a year."
+puts "Which means there are #{((365.0 * 24.0) * 60)*10} minutes in a decade."
+puts "I am #{((365.0 * 24.0 )* 360)*27} seconds old; as of April 19, 2017."
+puts "If you are 1246 million seconds old you are #{(((1246000000.0 / 60.0) / 60.0) / 24) / 365.0} years old."
