@@ -128,8 +128,9 @@ def englishNumber number
   # Now we just return "numString"...
   numString
 end
- puts "Enter any number to see it written out in plain english"
- puts "or say \"end\" to end the program"
+lineWidth = 80
+ puts "Enter any number to see it written out in plain english".center lineWidth
+ puts "Or say \"end\" to end the program".center lineWidth
 terminate = false
 while (not terminate)
  input = gets.chomp
@@ -137,5 +138,5 @@ while (not terminate)
  	terminate = true
  end
  input = input.to_i
- puts englishNumber(input)
+ puts englishNumber(input).center lineWidth
 end
