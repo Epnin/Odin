@@ -1,0 +1,82 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: #ffc;
+    margin: 20px;
+    padding: 0;
+    background-size: cover;
+    background-image: url("dylan.jpg");
+    background-repeat: no-repeat;
+}
+
+/* This is a comment, by the way */
+
+p {
+    line-height: 21px;
+}
+
+h1 {
+    color: #000;
+    background-color: #900;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+    border-bottom-color: #c00;
+    background: linear-gradient(to left,#ffc, #900, #f00);
+}
+h1:hover {
+  visibility:hidden;
+}
+
+h2 {
+    color: white;
+    background-color: #090;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 2px;
+    padding-left: 14px;
+    background: linear-gradient(to right,#ffc, #f00, #900);
+
+}
+
+h3 {
+    color: #999;
+    font-size: 1.25em;
+    background: linear-gradient(to left,#ffc, #900);
+
+}
+
+img {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #ccc;
+}
+
+img:hover {
+  border: dashed 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+li {
+    color: #900;
+    font-style: italic;
+}
+
+table {
+    background-color: #ccc;
+}
